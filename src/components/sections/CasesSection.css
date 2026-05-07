@@ -1,0 +1,214 @@
+.cases-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+
+.text-left {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.cases-desc {
+  color: var(--color-text-muted);
+  margin-bottom: 30px;
+}
+
+.map-visual {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.korea-map-placeholder {
+  width: 150px;
+  height: 200px;
+  background: radial-gradient(circle, #e0e7ff, #eff6ff);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #93c5fd;
+}
+
+.map-pin {
+  position: absolute;
+  color: #3b82f6;
+  width: 20px;
+  height: 20px;
+}
+.pin-seoul { top: 30%; left: 40%; }
+.pin-daejeon { top: 50%; left: 50%; }
+.pin-busan { bottom: 20%; right: 30%; }
+
+.map-features {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.m-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.m-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.m-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-text strong {
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+}
+
+.m-text span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.map-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid var(--color-border-light);
+}
+
+.q-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.small-btn {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  gap: 6px;
+}
+
+/* Gallery Area */
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.case-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  cursor: pointer;
+  background: white;
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+}
+
+.case-img {
+  height: 160px;
+  background: #cbd5e1;
+  position: relative;
+}
+
+/* 임시 배경색 연출 */
+.case-img-1 { background: linear-gradient(135deg, #1e293b, #334155); }
+.case-img-2 { background: linear-gradient(135deg, #0f172a, #1e293b); }
+.case-img-3 { background: linear-gradient(135deg, #334155, #475569); }
+.case-img-4 { background: linear-gradient(135deg, #1e293b, #475569); }
+
+.case-id {
+  position: absolute;
+  top: 15px; left: 15px;
+  background: white;
+  color: var(--color-primary);
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.case-info {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f172a;
+  color: white;
+}
+
+.case-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.c-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.case-link {
+  font-size: 0.8rem;
+  color: #60a5fa;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+@media (max-width: 1024px) {
+  .cases-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .map-visual {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .korea-map-placeholder {
+    width: 100%;
+    height: 150px;
+  }
+}
