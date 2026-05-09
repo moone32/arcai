@@ -5,6 +5,16 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 
 function App() {
+  const isProductionUrl = window.location.hostname.includes('arcai.co.kr');
+
+  if (isProductionUrl) {
+    return (
+      <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
+        <img src="/soon.png" alt="Coming Soon" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+      </div>
+    );
+  }
+
   return (
     <div className="app-container">
       <Header />
