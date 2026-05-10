@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, ArrowRight } from 'lucide-react';
+import { Phone, ArrowRight, Menu, X } from 'lucide-react';
 import './Header.css';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,11 +14,19 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container container">
         <div className="logo">
-          <span className="logo-text">ARCAI</span>
+          <img src="/logo.png" alt="ARCAI" className="logo-img" />
         </div>
         
         <nav className="desktop-nav">
@@ -36,7 +45,25 @@ const Header = () => {
           <button className="btn btn-primary consult-btn">
             도입 상담 <ArrowRight size={16} />
           </button>
+          <button 
+            className="mobile-menu-btn" 
+            aria-label="메뉴 열기"
+            onClick={toggleMobileMenu}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        <nav className="mobile-nav">
+          <a href="#solutions" onClick={closeMobileMenu}>솔루션</a>
+          <a href="#benefits" onClick={closeMobileMenu}>도입효과</a>
+          <a href="#cases" onClick={closeMobileMenu}>구축사례</a>
+          <a href="#pricing" onClick={closeMobileMenu}>가격안내</a>
+          <a href="#partners" className="highlight-nav" onClick={closeMobileMenu}>★ 파트너 모집</a>
+        </nav>
       </div>
     </header>
   );
