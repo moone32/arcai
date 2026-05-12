@@ -24,7 +24,7 @@
   --font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
   /* Layout */
-  --max-width: 1200px;
+  --max-width: 1460px;
   --header-height: 80px;
 }
 
@@ -66,12 +66,14 @@ button {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 60px; /* 웹 화면 패딩 */
+  padding: 0 0px;
+  /* 웹 화면 패딩 */
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 20px; /* 모바일 화면 패딩 */
+    padding: 0 20px;
+    /* 모바일 화면 패딩 */
   }
 }
 

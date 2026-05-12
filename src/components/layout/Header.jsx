@@ -28,12 +28,13 @@ const Header = () => {
         <div className="logo">
           <img src="/logo.png" alt="ARCAI" className="logo-img" />
         </div>
-        
+
         <nav className="desktop-nav">
           <a href="#solutions">솔루션</a>
           <a href="#benefits">도입효과</a>
+          <a href="#products">제품소개</a>
+          <a href="#support">정부지원</a>
           <a href="#cases">구축사례</a>
-          <a href="#pricing">가격안내</a>
           <a href="#partners" className="highlight-nav">★ 파트너 모집</a>
         </nav>
 
@@ -45,8 +46,8 @@ const Header = () => {
           <button className="btn btn-primary consult-btn">
             도입 상담 <ArrowRight size={16} />
           </button>
-          <button 
-            className="mobile-menu-btn" 
+          <button
+            className="mobile-menu-btn"
             aria-label="메뉴 열기"
             onClick={toggleMobileMenu}
           >

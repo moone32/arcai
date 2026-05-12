@@ -1,14 +1,15 @@
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   padding-top: calc(var(--header-height) + 60px);
   display: flex;
   align-items: flex-start;
   position: relative;
   overflow: hidden;
-  background-image: url('/hero_bg.png');
+  background-image: url('/hero_bg.gif');
   /*background-image: url('/hero_bg.jpg');*/
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* 어두운 오버레이 추가 */
@@ -26,7 +27,7 @@
 .hero-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 500px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -96,7 +97,7 @@
 .dashboard-card {
   position: absolute;
   right: 0;
-  top: 50px;
+  top: 0px;
   width: 90%;
   background: rgba(15, 23, 42, 0.8);
   -webkit-backdrop-filter: blur(12px);
@@ -180,7 +181,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  height: 120px;
+  height: 220px;
   gap: 8px;
   margin-bottom: 10px;
 }
@@ -233,6 +234,7 @@
   width: 100px;
   height: 140px;
   animation: box-blink 1s step-end infinite;
+  display: none;
 }
 
 .box-2 {
@@ -242,6 +244,7 @@
   height: 100px;
   border-color: #3b82f6;
   background: rgba(59, 130, 246, 0.1);
+  display: none;
 }
 
 .box-2 span {
@@ -275,7 +278,8 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    margin: 0 auto 0 0; /* 왼쪽 정렬을 위해 오른쪽 여백을 auto로 설정 */
+    margin: 0 auto 0 0;
+    /* 왼쪽 정렬을 위해 오른쪽 여백을 auto로 설정 */
     width: max-content;
   }
 
