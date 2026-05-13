@@ -12,14 +12,14 @@ const HeroSection = () => {
             <span className="live-dot"></span> 중대재해 처벌법 대책 마련 - 지금 설치 안하면 책임은 회사가 집니다.
           </div>
 
-          <h2 className="hero-title">
+          <h2 className="hero-top-title">
             <span className="text-gradient"> AI</span> 산업안전 플랫폼
           </h2>
 
           <h1 className="hero-title">
             AI가 위험을 <br />
             <span className="text-gradient"> 실시간</span> 감지하고 <br />
-            사고를 예방합니다
+            사고를 예방합니다.
           </h1>
 
           <ul className="hero-features">
@@ -28,12 +28,14 @@ const HeroSection = () => {
             <li><CheckCircle2 className="check-icon" /> 전국 설치 대응 가능</li>
           </ul>
 
-          <button className="btn btn-primary hero-btn">
-            무료 견적 받기 <ChevronRight size={18} />
-          </button>
-          <button className="btn btn-primary hero-btn">
-            제품 자세히 보기 <ChevronRight size={18} />
-          </button>
+          <div className="hero-buttons">
+            <button className="btn btn-primary hero-btn">
+              무료 견적 받기 <ChevronRight size={18} />
+            </button>
+            <button className="btn btn-outline hero-btn">
+              제품 자세히 보기 <ChevronRight size={18} />
+            </button>
+          </div>
         </div>
 
         <div className="hero-visual">
