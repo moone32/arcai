@@ -6,7 +6,8 @@
   /* Dark Navy Background */
   --color-secondary: #1a2a4e;
   /* Lighter Navy for Cards */
-  --color-accent: #2563eb;
+  /*--color-accent: #2563eb;*/
+  --color-accent: #01b0b0;
   /* Vibrant Blue for Buttons */
   --color-accent-hover: #1d4ed8;
   --color-alert: #ef4444;
@@ -78,7 +79,8 @@ button {
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  /*background: linear-gradient(90deg, #3b82f6, #8b5cf6);*/
+  background: linear-gradient(90deg, #39beb3, #00b5b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

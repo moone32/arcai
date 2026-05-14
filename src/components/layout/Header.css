@@ -52,7 +52,9 @@
 }
 
 .highlight-nav {
-  color: #60a5fa !important;
+  /*color: #60a5fa !important;*/
+  color: #01b0b0 !important;
+
 }
 
 .header-actions {

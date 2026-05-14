@@ -1,5 +1,5 @@
 .consult-banner {
-  padding: 40px 0;
+  padding: 10px 0;
 }
 
 .banner-wrapper {
@@ -91,6 +91,7 @@
     align-items: flex-start;
     gap: 15px;
   }
+
   .banner-checks {
     margin-left: 0;
     padding-left: 0;
@@ -106,6 +107,7 @@
     gap: 24px;
     padding: 24px;
   }
+
   .banner-icon {
     display: none;
   }

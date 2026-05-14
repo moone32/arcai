@@ -5,6 +5,7 @@
   align-items: flex-start;
   position: relative;
   overflow: hidden;
+  background-color: #0a162f;
   background-image: url('/hero_bg_gif.gif');
   /*background-image: url('/hero_bg.jpg');*/
   background-size: contain;
@@ -12,7 +13,7 @@
   background-repeat: no-repeat;
 }
 
-/* 어두운 오버레이 추가 */
+/* 어두운 오버레이 및 배경 이미지 좌우 그라데이션 블렌딩 추가 */
 .hero::before {
   content: '';
   position: absolute;
@@ -20,7 +21,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(11, 27, 61, 0.95) 0%, rgba(11, 27, 61, 0.4) 100%);
+  background: linear-gradient(to right, #06132f 0%, #0a1630 35%, rgba(10, 22, 47, 0) 40%, rgba(10, 22, 47, 0) 40%, #0a1630 71%, #0a162f 100%);
+  /*,linear-gradient(to right, rgba(11, 27, 61, 0.95) 0%, rgba(11, 27, 61, 0.4) 100%);*/
   z-index: 1;
 }
 
@@ -81,7 +83,8 @@
 }
 
 .check-icon {
-  color: var(--color-accent);
+  /*color: var(--color-accent);*/
+  color: #02b2b0;
 }
 
 .hero-buttons {
@@ -94,7 +97,8 @@
   font-size: 1.1rem;
   padding: 16px 32px;
   border-radius: 8px;
-  background-color: var(--color-accent);
+  /*background-color: var(--color-accent);*/
+  background-color: #01b0b0;
   color: white;
   display: inline-flex;
   align-items: center;
@@ -108,7 +112,8 @@
 
 .hero-btn.btn-outline {
   background-color: transparent;
-  border-color: var(--color-accent);
+  /*border-color: var(--color-accent);*/
+  border-color: #01b0b0;
 }
 
 /* 대시보드 비주얼 연출 */
@@ -293,6 +298,10 @@
     background-position-x: center;
     background-position-y: 280px;
     padding-top: calc(var(--header-height) + 40px);
+  }
+
+  .hero::before {
+    background: linear-gradient(to bottom, #06132f 0%, #0a1630 21%, rgba(10, 22, 47, 0) 40%, rgba(10, 22, 47, 0) 40%, #0a1630 55%, #0a162f 100%);
   }
 
   .hero-container {
