@@ -1,0 +1,303 @@
+.benefits-page {
+  padding-top: calc(var(--header-height) + 60px);
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.benefits-hero {
+  background-color: #ffffff;
+  padding: 40px 0 60px;
+}
+
+.benefits-hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .benefits-hero-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.benefits-hero-text {
+  flex: 1;
+}
+
+.bh-label {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #059669;
+  margin-bottom: 16px;
+}
+
+.bh-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .bh-title {
+    font-size: 3.2rem;
+  }
+}
+
+.bh-desc {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.benefits-hero-mockup {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.benefits-hero-mockup img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* 4 Steps Section */
+.benefits-steps-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.benefits-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .benefits-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .benefits-steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+  }
+}
+
+.b-step-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.b-step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  border-color: #d1fae5;
+}
+
+/* Arrow between cards on desktop */
+@media (min-width: 1024px) {
+  .b-step-card:not(:last-child)::after {
+    content: '>';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #cbd5e1;
+    font-weight: 300;
+    z-index: 10;
+  }
+}
+
+.b-step-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #059669;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.b-step-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.b-step-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Stats Section */
+.benefits-stats-section {
+  padding: 60px 0 80px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.b-stats-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 40px;
+}
+
+.b-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 576px) {
+  .b-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .b-stats-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+  }
+}
+
+.b-stat-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .b-stat-col:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: #e5e7eb;
+  }
+}
+
+.b-stat-num {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.b-stat-subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.b-stat-desc {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Consult Banner */
+.benefits-consult {
+  margin-top: 20px;
+  margin-bottom: 80px;
+  background-color: #f0fdf4;
+  border: 1px solid #d1fae5;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .benefits-consult {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
+
+.consult-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.consult-icon {
+  color: #059669;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .consult-icon {
+    display: block;
+  }
+}
+
+.consult-text h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.consult-text p {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.consult-action-btn {
+  background-color: #059669;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.consult-action-btn:hover {
+  background-color: #047857;
+}

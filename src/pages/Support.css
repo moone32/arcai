@@ -1,0 +1,310 @@
+.support-page {
+  padding-top: calc(var(--header-height) + 60px);
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.support-hero {
+  padding: 40px 0 60px;
+  background-color: #ffffff;
+}
+
+.support-hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .support-hero-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.support-hero-text {
+  flex: 1;
+}
+
+.su-label {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #059669;
+  margin-bottom: 16px;
+}
+
+.su-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.su-title .highlight {
+  color: #059669;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .su-title {
+    font-size: 3.2rem;
+  }
+}
+
+.su-desc {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.support-hero-mockup {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.support-hero-mockup img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 4 Benefits Grid Section */
+.support-benefits-section {
+  padding: 40px 0 60px;
+  background-color: #ffffff;
+}
+
+.support-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  border: 1px solid #f3f4f6;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+@media (min-width: 640px) {
+  .support-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .support-benefits-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.su-benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 16px;
+}
+
+@media (min-width: 1024px) {
+  .su-benefit-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background-color: #e5e7eb;
+  }
+}
+
+.su-benefit-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #059669;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.su-benefit-icon.chart-icon::before {
+  content: '';
+  position: absolute;
+  top: -3px; left: -3px; right: -3px; bottom: -3px;
+  border-radius: 50%;
+  border: 3px solid #e5e7eb;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.su-benefit-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.su-benefit-desc {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Programs Section */
+.support-programs-section {
+  padding: 60px 0 80px;
+  background-color: #ffffff;
+}
+
+.support-programs-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 40px;
+}
+
+.support-programs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .support-programs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.su-program-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.su-program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,0.1);
+  border-color: #d1fae5;
+}
+
+.su-prog-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #ecfdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #059669;
+  margin-bottom: 24px;
+}
+
+.su-prog-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.su-prog-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: #ecfdf5;
+  color: #059669;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.su-prog-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Consult Banner */
+.support-consult {
+  margin-top: 20px;
+  margin-bottom: 80px;
+  background-color: #f0fdf4;
+  border: 1px solid #d1fae5;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .support-consult {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
+
+.consult-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.consult-icon {
+  color: #059669;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .consult-icon {
+    display: block;
+  }
+}
+
+.consult-text h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.consult-text p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.consult-action-btn {
+  background-color: #059669;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.consult-action-btn:hover {
+  background-color: #047857;
+}

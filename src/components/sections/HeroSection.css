@@ -301,7 +301,7 @@
   }
 
   .hero::before {
-    background: linear-gradient(to bottom, #06132f 0%, #0a1630 21%, rgba(10, 22, 47, 0) 40%, rgba(10, 22, 47, 0) 40%, #0a1630 55%, #0a162f 100%);
+    background: linear-gradient(to bottom, #06132f 0%, #0a1630 22%, rgba(10, 22, 47, 0) 40%, rgba(10, 22, 47, 0) 40%, #0a1630 55%, #0a162f 100%);
   }
 
   .hero-container {
