@@ -57,6 +57,12 @@
 
 }
 
+.desktop-nav a.active-nav,
+.mobile-nav a.active-nav {
+  color: #01b0b0 !important;
+  font-weight: 600;
+}
+
 .header-actions {
   display: flex;
   align-items: center;

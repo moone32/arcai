@@ -32,7 +32,7 @@
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #059669;
+  color: #01b0b0;
   margin-bottom: 16px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .ch-title .highlight {
-  color: #059669;
+  color: #01b0b0;
 }
 
 @media (min-width: 768px) {
@@ -94,7 +94,7 @@
 }
 
 .ch-stat-icon {
-  color: #059669;
+  color: #01b0b0;
   margin-bottom: 16px;
 }
 
@@ -112,7 +112,7 @@
 
 /* Gallery Section */
 .cases-gallery-section {
-  padding: 40px 0 80px;
+  /*padding: 40px 0 80px;*/
   background-color: #ffffff;
 }
 
@@ -137,14 +137,14 @@
 }
 
 .filter-btn:hover {
-  border-color: #059669;
-  color: #059669;
+  border-color: #01b0b0;
+  color: #01b0b0;
 }
 
 .filter-btn.active {
-  background-color: #059669;
+  background-color: #01b0b0;
   color: #ffffff;
-  border-color: #059669;
+  border-color: #01b0b0;
 }
 
 /* Grid */
@@ -172,7 +172,7 @@
   border: 1px solid #f3f4f6;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -180,7 +180,7 @@
 
 .case-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px -5px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
 }
 
 .case-thumb {
@@ -260,7 +260,7 @@
 .cm-value {
   font-size: 1.3rem;
   font-weight: 800;
-  color: #059669;
+  color: #01b0b0;
 }
 
 /* Consult Banner */
@@ -293,7 +293,7 @@
 }
 
 .consult-icon {
-  color: #059669;
+  color: #01b0b0;
   display: none;
   background-color: #ffffff;
   width: 72px;
@@ -323,7 +323,7 @@
 }
 
 .consult-action-btn {
-  background-color: #059669;
+  background-color: #01b0b0;
   color: white;
   padding: 16px 32px;
   border-radius: 8px;
@@ -339,5 +339,5 @@
 }
 
 .consult-action-btn:hover {
-  background-color: #047857;
+  background-color: #01b0b0;
 }

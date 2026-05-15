@@ -40,13 +40,13 @@
   justify-content: center;
   position: relative;
   color: var(--color-primary);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
   transition: all 0.3s;
 }
 
 .function-item:hover .fn-icon-box {
-  border-color: #3b82f6;
-  color: #3b82f6;
+  border-color: #01b0b0;
+  color: #01b0b0;
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(59, 130, 246, 0.15);
 }
@@ -68,7 +68,7 @@
 }
 
 .function-item:hover .fn-badge {
-  background-color: #3b82f6;
+  background-color: #01b0b0;
 }
 
 .fn-title {
@@ -88,6 +88,7 @@
   .functions-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .fn-icon-box {
     width: 100px;
     height: 100px;

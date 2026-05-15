@@ -20,7 +20,7 @@
 }
 
 .text-highlight {
-  color: #60a5fa;
+  color: #01b0b0;
 }
 
 .cta-content p {
@@ -77,7 +77,8 @@
   color: white;
 }
 
-.copyright, .company-details {
+.copyright,
+.company-details {
   font-size: 0.85rem;
   color: var(--color-text-muted);
 }
@@ -119,15 +120,15 @@
     align-items: flex-start;
     gap: 30px;
   }
-  
+
   .consult-box {
     text-align: left;
   }
-  
+
   .phone-number {
     justify-content: flex-start;
   }
-  
+
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;

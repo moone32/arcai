@@ -32,7 +32,7 @@
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #059669;
+  color: #01b0b0;
   margin-bottom: 16px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .su-title .highlight {
-  color: #059669;
+  color: #01b0b0;
   display: block;
 }
 
@@ -85,7 +85,7 @@
   border: 1px solid #f3f4f6;
   border-radius: 16px;
   padding: 40px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
 
 @media (min-width: 640px) {
@@ -125,11 +125,11 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 3px solid #10b981;
+  border: 3px solid #01b0b0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #059669;
+  color: #01b0b0;
   margin-bottom: 24px;
   position: relative;
 }
@@ -137,7 +137,10 @@
 .su-benefit-icon.chart-icon::before {
   content: '';
   position: absolute;
-  top: -3px; left: -3px; right: -3px; bottom: -3px;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: 50%;
   border: 3px solid #e5e7eb;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
@@ -158,7 +161,7 @@
 
 /* Programs Section */
 .support-programs-section {
-  padding: 60px 0 80px;
+  /*padding: 60px 0 80px;*/
   background-color: #ffffff;
 }
 
@@ -191,13 +194,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .su-program-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px -5px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
   border-color: #d1fae5;
 }
 
@@ -209,7 +212,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #059669;
+  color: #01b0b0;
   margin-bottom: 24px;
 }
 
@@ -224,7 +227,7 @@
   display: inline-block;
   padding: 6px 16px;
   background-color: #ecfdf5;
-  color: #059669;
+  color: #01b0b0;
   font-size: 0.85rem;
   font-weight: 700;
   border-radius: 20px;
@@ -267,7 +270,7 @@
 }
 
 .consult-icon {
-  color: #059669;
+  color: #01b0b0;
   display: none;
 }
 
@@ -290,7 +293,7 @@
 }
 
 .consult-action-btn {
-  background-color: #059669;
+  background-color: #01b0b0;
   color: white;
   padding: 16px 32px;
   border-radius: 8px;
@@ -306,5 +309,5 @@
 }
 
 .consult-action-btn:hover {
-  background-color: #047857;
+  background-color: #01b0b0;
 }

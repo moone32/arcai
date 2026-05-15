@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import {
   CircleDollarSign,
   PieChart,
   ClipboardCheck,
@@ -86,7 +86,7 @@ const Support = () => {
           <div className="support-benefits-grid">
             {benefits.map((benefit, idx) => (
               <div className="su-benefit-item" key={idx}>
-                <div className={`su-benefit-icon ${benefit.chart ? 'chart-icon' : ''}`}>
+                <div className={`su-benefit-icon ${benefit.chart ? '' : ''}`}>
                   {benefit.icon}
                 </div>
                 <h3 className="su-benefit-title">{benefit.title}</h3>

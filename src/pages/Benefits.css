@@ -7,7 +7,7 @@
 /* Hero Section */
 .benefits-hero {
   background-color: #ffffff;
-  padding: 40px 0 60px;
+  /*padding: 40px 0 60px;*/
 }
 
 .benefits-hero-container {
@@ -31,7 +31,7 @@
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #059669;
+  color: #01b0b0;
   margin-bottom: 16px;
 }
 
@@ -65,7 +65,7 @@
   max-width: 100%;
   height: auto;
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 /* 4 Steps Section */
@@ -103,14 +103,14 @@
   align-items: center;
   text-align: center;
   position: relative;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
 }
 
 .b-step-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   border-color: #d1fae5;
 }
 
@@ -133,11 +133,11 @@
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  border: 2px solid #10b981;
+  border: 2px solid #01b0b0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #059669;
+  color: #01b0b0;
   margin-bottom: 20px;
   background-color: #ffffff;
 }
@@ -211,7 +211,7 @@
 .b-stat-num {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #059669;
+  color: #01b0b0;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -260,7 +260,7 @@
 }
 
 .consult-icon {
-  color: #059669;
+  color: #01b0b0;
   display: none;
 }
 
@@ -283,7 +283,7 @@
 }
 
 .consult-action-btn {
-  background-color: #059669;
+  background-color: #01b0b0;
   color: white;
   padding: 16px 32px;
   border-radius: 8px;
@@ -299,5 +299,5 @@
 }
 
 .consult-action-btn:hover {
-  background-color: #047857;
+  background-color: #01b0b0;
 }

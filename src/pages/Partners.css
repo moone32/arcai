@@ -34,14 +34,14 @@
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #059669;
+  color: #01b0b0;
   margin-bottom: 16px;
 }
 
 .ph-title {
   font-size: 2.8rem;
   font-weight: 900;
-  color: #047857;
+  color: #1f2937;
   margin-bottom: 24px;
   letter-spacing: -1px;
 }
@@ -75,7 +75,7 @@
 }
 
 .ph-feature-icon {
-  color: #059669;
+  color: #01b0b0;
   margin-bottom: 12px;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .ph-badge-icon {
-  color: #059669;
+  color: #01b0b0;
 }
 
 /* Right Hero - Profit Card */
@@ -178,7 +178,7 @@
 }
 
 .profit-col-header {
-  background-color: #047857;
+  background-color: #01b0b0;
   color: white;
   padding: 12px;
   font-size: 0.95rem;
@@ -199,7 +199,7 @@
 }
 
 .profit-col-icon {
-  color: #059669;
+  color: #01b0b0;
   display: flex;
   justify-content: center;
 }
@@ -237,7 +237,7 @@
 .pb-card-val {
   font-size: 1.1rem;
   font-weight: 800;
-  color: #059669;
+  color: #01b0b0;
   margin-bottom: 12px;
 }
 
@@ -290,12 +290,12 @@
   background: #ffffff;
   padding: 16px 24px;
   border-radius: 40px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
   border: 1px solid #f1f5f9;
 }
 
 .ps-step-icon {
-  color: #059669;
+  color: #01b0b0;
 }
 
 .ps-step span {
@@ -335,13 +335,13 @@
 }
 
 .p-box-2 {
-  background-color: #047857;
+  background-color: #01b0b0;
   color: white;
 }
 
 .p-box-3 {
   background-color: #ffffff;
-  border: 2px solid #059669;
+  border: 2px solid #01b0b0;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -353,9 +353,18 @@
   margin-bottom: 20px;
 }
 
-.p-box-1 .p-box-title { color: #065f46; }
-.p-box-2 .p-box-title { color: #ffffff; }
-.p-box-3 .p-box-title { color: #065f46; font-size: 1.4rem;}
+.p-box-1 .p-box-title {
+  color: #065f46;
+}
+
+.p-box-2 .p-box-title {
+  color: #ffffff;
+}
+
+.p-box-3 .p-box-title {
+  color: #01b0b0;
+  font-size: 1.4rem;
+}
 
 .p-box-list {
   list-style: none;
@@ -375,8 +384,13 @@
   line-height: 1.4;
 }
 
-.p-box-1 .p-box-list li { color: #064e3b; }
-.p-box-2 .p-box-list li { color: #ecfdf5; }
+.p-box-1 .p-box-list li {
+  color: #064e3b;
+}
+
+.p-box-2 .p-box-list li {
+  color: #ecfdf5;
+}
 
 .p-box-list li svg {
   flex-shrink: 0;
@@ -391,7 +405,7 @@
 }
 
 .p-box-3-val {
-  color: #047857;
+  color: #01b0b0;
   font-size: 0.95rem;
   font-weight: 700;
   margin-top: 12px;
@@ -432,7 +446,7 @@
 }
 
 .pp-step-icon {
-  color: #059669;
+  color: #01b0b0;
 }
 
 .pp-step-info {
@@ -578,7 +592,7 @@
 }
 
 .btn-submit {
-  background-color: #047857;
+  background-color: #01b0b0;
   color: white;
   padding: 12px 24px;
   border-radius: 6px;
@@ -592,8 +606,8 @@
 
 .btn-download {
   background-color: #ffffff;
-  color: #047857;
-  border: 1px solid #047857;
+  color: #01b0b0;
+  border: 1px solid #01b0b0;
   padding: 12px 24px;
   border-radius: 6px;
   font-weight: 700;

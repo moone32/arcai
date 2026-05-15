@@ -36,9 +36,7 @@ const Solutions = () => {
       icon: <ShieldCheck size={28} />,
       thumbClass: 'thumb-bg-1',
       thumbContent: (
-        <div className="sol-bounding-box">
-          <User size={48} color="#10b981" />
-        </div>
+        <img src="/sol_img_01.png" alt="안전모/안전장비 감지" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       )
     },
     {
@@ -49,9 +47,7 @@ const Solutions = () => {
       icon: <Flame size={28} />,
       thumbClass: 'thumb-bg-2',
       thumbContent: (
-        <div className="sol-bounding-box alert">
-          <Flame size={48} color="#ef4444" />
-        </div>
+        <img src="/sol_img_02.png" alt="화재/연기 감지" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       )
     },
     {
@@ -62,9 +58,7 @@ const Solutions = () => {
       icon: <PersonStanding size={28} />,
       thumbClass: 'thumb-bg-3',
       thumbContent: (
-        <div className="sol-bounding-box alert">
-          <PersonStanding size={48} color="#ef4444" />
-        </div>
+        <img src="/sol_img_03.png" alt="쓰러짐/이상행동 감지" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       )
     },
     {
@@ -75,9 +69,7 @@ const Solutions = () => {
       icon: <DoorClosed size={28} />,
       thumbClass: 'thumb-bg-4',
       thumbContent: (
-        <div className="sol-bounding-box alert">
-          <DoorClosed size={48} color="#ef4444" />
-        </div>
+        <img src="/sol_img_04.png" alt="침입/출입 통제" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       )
     },
     {
@@ -88,7 +80,7 @@ const Solutions = () => {
       icon: <LineChart size={28} />,
       thumbClass: 'thumb-bg-5',
       thumbContent: (
-        <LineChart size={64} color="#60a5fa" strokeWidth={1.5} />
+        <img src="/sol_img_05.png" alt="데이터 분석 & 리포트" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       )
     },
     {
@@ -99,13 +91,7 @@ const Solutions = () => {
       icon: <BellRing size={28} />,
       thumbClass: 'thumb-bg-6',
       thumbContent: (
-        <div className="sol-alert-popup">
-          <div className="sol-alert-icon"><BellRing size={20} /></div>
-          <div className="sol-alert-text">
-            <h4>위험 감지 알림</h4>
-            <p>화재 징후가 감지되었습니다.</p>
-          </div>
-        </div>
+        <img src="/sol_img_06.png" alt="모바일 실시간 알림" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       )
     }
   ];

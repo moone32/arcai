@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import {
   CheckCircle, Building, CircleDollarSign, TrendingUp, Megaphone,
   Landmark, Database, Users, GraduationCap, Award, Wrench, Headset,
   FileText, MessagesSquare, Handshake, MonitorPlay, Coins, Download, ArrowRight
@@ -20,7 +20,7 @@ const Partners = () => {
               AI 기반 산업안전 솔루션으로<br />
               더 안전한 산업 현장을 함께 만들어갑니다.
             </p>
-            
+
             <div className="ph-features-grid">
               <div className="ph-feature">
                 <CheckCircle className="ph-feature-icon" size={32} strokeWidth={1.5} />
@@ -72,7 +72,7 @@ const Partners = () => {
           <div className="partners-hero-right">
             <div className="profit-card">
               <h3 className="profit-card-title">수익 한눈에 보기</h3>
-              
+
               <div className="profit-top-grid">
                 <div className="profit-col">
                   <div className="profit-col-header">한 현장 수익</div>
@@ -83,7 +83,7 @@ const Partners = () => {
                 </div>
                 <div className="profit-col">
                   <div className="profit-col-header">월 예상 수익</div>
-                  <div className="profit-col-value">1,000 ~ 3,000<span style={{fontSize:'1rem'}}>+만원 이상</span></div>
+                  <div className="profit-col-value">1,000 ~ 3,000<span style={{ fontSize: '1rem' }}>+만원 이상</span></div>
                   <div className="profit-col-icon">
                     <TrendingUp size={48} strokeWidth={1.5} />
                   </div>
@@ -92,24 +92,24 @@ const Partners = () => {
 
               <div className="profit-bottom-grid">
                 <div className="pb-card">
-                  <Wrench size={24} color="#64748b" style={{marginBottom: '8px'}}/>
+                  <Wrench size={24} color="#64748b" style={{ marginBottom: '8px' }} />
                   <div className="pb-card-title">출장비 / 장착비</div>
                   <div className="pb-card-val">100 ~ 300만원</div>
-                  <div className="pb-card-desc">현장 방문 및<br/>장착 시 발생</div>
+                  <div className="pb-card-desc">현장 방문 및<br />장착 시 발생</div>
                 </div>
                 <div className="pb-card">
-                  <Coins size={24} color="#64748b" style={{marginBottom: '8px'}}/>
+                  <Coins size={24} color="#64748b" style={{ marginBottom: '8px' }} />
                   <div className="pb-card-title">한 현장 수익</div>
                   <div className="pb-card-val">300 ~ 800만원</div>
-                  <div className="pb-card-desc">설치 완료 후<br/>발생하는 기본 수익</div>
+                  <div className="pb-card-desc">설치 완료 후<br />발생하는 기본 수익</div>
                 </div>
                 <div className="pb-card pb-highlight">
-                  <div className="pb-card-title" style={{color: '#b45309'}}>정부지원으로 계약이 쉽습니다!</div>
-                  <div className="pb-card-desc" style={{color: '#92400e'}}>
-                    고객 부담은 줄고,<br/>계약 전환율은 높아집니다.
+                  <div className="pb-card-title" style={{ color: '#b45309' }}>정부지원으로 계약이 쉽습니다!</div>
+                  <div className="pb-card-desc" style={{ color: '#92400e' }}>
+                    고객 부담은 줄고,<br />계약 전환율은 높아집니다.
                   </div>
-                  <div className="pb-card-val" style={{color: '#b45309', marginTop: '8px', fontSize: '1.2rem'}}>
-                    정부지원 최대<br/>70~80%
+                  <div className="pb-card-val" style={{ color: '#b45309', marginTop: '8px', fontSize: '1.2rem' }}>
+                    정부지원 최대<br />70~80%
                   </div>
                 </div>
               </div>
@@ -154,27 +154,27 @@ const Partners = () => {
           <div className="p-box p-box-1">
             <h3 className="p-box-title">리스크는 낮습니다!</h3>
             <ul className="p-box-list">
-              <li><CheckCircle size={16}/> 초기 재고 부담 없음</li>
-              <li><CheckCircle size={16}/> 선금 구조 운영</li>
-              <li><CheckCircle size={16}/> 본사 정산 시스템 제공</li>
-              <li><CheckCircle size={16}/> 기술지원 및 영업 지원</li>
+              <li><CheckCircle size={16} /> 초기 재고 부담 없음</li>
+              <li><CheckCircle size={16} /> 선금 구조 운영</li>
+              <li><CheckCircle size={16} /> 본사 정산 시스템 제공</li>
+              <li><CheckCircle size={16} /> 기술지원 및 영업 지원</li>
             </ul>
-            <p style={{marginTop: 'auto', fontSize: '0.9rem', color: '#064e3b', fontWeight: '600'}}>현금 흐름이 안정적인 구조로 운영됩니다.</p>
+            <p style={{ marginTop: 'auto', fontSize: '0.9rem', color: '#064e3b', fontWeight: '600' }}>현금 흐름이 안정적인 구조로 운영됩니다.</p>
           </div>
-          
+
           <div className="p-box p-box-2">
             <h3 className="p-box-title">이런 분을 찾습니다!</h3>
             <ul className="p-box-list">
-              <li><CheckCircle size={16} color="#34d399"/> 영업 경험이 있으신 분</li>
-              <li><CheckCircle size={16} color="#34d399"/> 건설 / 안전 / 통신 / 전기업 종사자</li>
-              <li><CheckCircle size={16} color="#34d399"/> 기존 거래처를 보유한 사업자</li>
-              <li><CheckCircle size={16} color="#34d399"/> 지역 기반으로 사업 확장을 원하시는 분</li>
+              <li><CheckCircle size={16} color="#34d399" /> 영업 경험이 있으신 분</li>
+              <li><CheckCircle size={16} color="#34d399" /> 건설 / 안전 / 통신 / 전기업 종사자</li>
+              <li><CheckCircle size={16} color="#34d399" /> 기존 거래처를 보유한 사업자</li>
+              <li><CheckCircle size={16} color="#34d399" /> 지역 기반으로 사업 확장을 원하시는 분</li>
             </ul>
             <div className="highlight-text">초보도 가능합니다! (교육 지원)</div>
           </div>
 
           <div className="p-box p-box-3">
-            <CircleDollarSign size={64} color="#059669" strokeWidth={1} style={{marginBottom: '20px'}}/>
+            <CircleDollarSign size={64} color="#01b0b0" strokeWidth={1} style={{ marginBottom: '20px' }} />
             <h3 className="p-box-title">마진율 30~50% 가능</h3>
             <div className="p-box-3-val">추가인센티브 지급 최대 5%</div>
           </div>
@@ -187,43 +187,43 @@ const Partners = () => {
           <h2 className="pp-title">파트너 등록 절차</h2>
           <div className="pp-steps">
             <div className="pp-step">
-              <FileText className="pp-step-icon" size={40} strokeWidth={1.5}/>
+              <FileText className="pp-step-icon" size={40} strokeWidth={1.5} />
               <div className="pp-step-info">
                 <span className="pp-step-num">01 신청 접수</span>
                 <span className="pp-step-title">파트너 신청서 제출</span>
               </div>
             </div>
-            <ArrowRight className="pp-arrow" size={24}/>
-            
+            <ArrowRight className="pp-arrow" size={24} />
+
             <div className="pp-step">
-              <MessagesSquare className="pp-step-icon" size={40} strokeWidth={1.5}/>
+              <MessagesSquare className="pp-step-icon" size={40} strokeWidth={1.5} />
               <div className="pp-step-info">
                 <span className="pp-step-num">02 심층 상담</span>
                 <span className="pp-step-title">요건 확인 및 개별 상담</span>
               </div>
             </div>
-            <ArrowRight className="pp-arrow" size={24}/>
+            <ArrowRight className="pp-arrow" size={24} />
 
             <div className="pp-step">
-              <Handshake className="pp-step-icon" size={40} strokeWidth={1.5}/>
+              <Handshake className="pp-step-icon" size={40} strokeWidth={1.5} />
               <div className="pp-step-info">
                 <span className="pp-step-num">03 계약 체결</span>
                 <span className="pp-step-title">파트너 계약 체결</span>
               </div>
             </div>
-            <ArrowRight className="pp-arrow" size={24}/>
+            <ArrowRight className="pp-arrow" size={24} />
 
             <div className="pp-step">
-              <MonitorPlay className="pp-step-icon" size={40} strokeWidth={1.5}/>
+              <MonitorPlay className="pp-step-icon" size={40} strokeWidth={1.5} />
               <div className="pp-step-info">
                 <span className="pp-step-num">04 교육 진행</span>
                 <span className="pp-step-title">제품 및 영업 교육</span>
               </div>
             </div>
-            <ArrowRight className="pp-arrow" size={24}/>
+            <ArrowRight className="pp-arrow" size={24} />
 
             <div className="pp-step">
-              <TrendingUp className="pp-step-icon" size={40} strokeWidth={1.5}/>
+              <TrendingUp className="pp-step-icon" size={40} strokeWidth={1.5} />
               <div className="pp-step-info">
                 <span className="pp-step-num">05 파트너 활동</span>
                 <span className="pp-step-title">영업 및 마케팅 활동</span>
@@ -239,7 +239,7 @@ const Partners = () => {
           <div className="pf-left">
             <Headset className="pf-icon" size={56} strokeWidth={1.5} />
             <div className="pf-left-text">
-              <h2>파트너 모집에 대해<br/>더 궁금하신가요?</h2>
+              <h2>파트너 모집에 대해<br />더 궁금하신가요?</h2>
               <p>전문 상담원이 친절하게 안내해 드립니다.</p>
             </div>
           </div>
