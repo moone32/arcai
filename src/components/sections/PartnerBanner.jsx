@@ -2,19 +2,21 @@ import React from 'react';
 import { Download, ArrowRight, Settings, Repeat, DollarSign } from 'lucide-react';
 import './PartnerBanner.css';
 
+import { navigateTo } from '../../utils/navigation';
+
 const PartnerBanner = () => {
   return (
     <section className="partner-banner section" id="partners">
       <div className="container">
         <div className="pbanner-wrapper">
-          
+
           <div className="pbanner-main">
             <h2 className="pbanner-title">
-              AI 안전 사업<br/>
+              AI 안전 사업<br />
               <span className="text-highlight">지역 파트너 모집</span>
             </h2>
             <p className="pbanner-desc">안전관리의 혁신과 함께 성장할 파트너를 모십니다.</p>
-            
+
             <div className="pbanner-tags">
               <span>설치 수익</span>
               <span>유지관리 수익</span>
@@ -38,29 +40,29 @@ const PartnerBanner = () => {
             <h3 className="side-title">3가지 수익 모델로 <span>안정적인 수익 창출</span></h3>
             <div className="models">
               <div className="model-item">
-                <div className="m-icon"><Settings size={24}/></div>
-                <span>설치 수익<br/><small>설치 시 일시 수익</small></span>
+                <div className="m-icon"><Settings size={24} /></div>
+                <span>설치 수익<br /><small>설치 시 일시 수익</small></span>
               </div>
               <div className="model-item">
-                <div className="m-icon"><Repeat size={24}/></div>
-                <span>유지 수익<br/><small>유지관리에 따른 지속적 수익</small></span>
+                <div className="m-icon"><Repeat size={24} /></div>
+                <span>유지 수익<br /><small>유지관리에 따른 지속적 수익</small></span>
               </div>
               <div className="model-item">
-                <div className="m-icon"><DollarSign size={24}/></div>
-                <span>지원금 수익<br/><small>정부 지원금 확보 매출 극대화</small></span>
+                <div className="m-icon"><DollarSign size={24} /></div>
+                <span>지원금 수익<br /><small>정부 지원금 확보 매출 극대화</small></span>
               </div>
             </div>
-            
+
             <div className="pbanner-actions">
               <button className="btn btn-outline dl-btn">
-                <Download size={16}/> 사업설명서 다운로드
+                <Download size={16} /> 사업설명서 다운로드
               </button>
               <button className="btn btn-primary join-btn">
-                지역 대리점 신청 <ArrowRight size={16}/>
+                지역 대리점 신청 <ArrowRight size={16} />
               </button>
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>

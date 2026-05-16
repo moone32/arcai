@@ -26,9 +26,9 @@
   height: 40px;
   border-radius: 50%;
   background: rgba(59, 130, 246, 0.2);
-  color: #60a5fa;
+  color: #01b0b0;
   font-weight: bold;
-  border: 1px solid #3b82f6;
+  border: 1px solid #01b0b0;
   margin-bottom: 20px;
 }
 
@@ -55,7 +55,7 @@
 .dot.blue {
   width: 6px;
   height: 6px;
-  background: #3b82f6;
+  background: #01b0b0;
   border-radius: 50%;
 }
 
@@ -141,14 +141,17 @@
   font-weight: 700;
 }
 
-.panel-value.green { color: #34d399; }
-.panel-value small { font-size: 1rem; margin-left: 2px; }
+/*.panel-value.green { color: #34d399; }*/
+.panel-value small {
+  font-size: 1rem;
+  margin-left: 2px;
+}
 
 .circle-chart {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: conic-gradient(#3b82f6 86%, rgba(255, 255, 255, 0.1) 0);
+  background: conic-gradient(#01b0b0 86%, rgba(255, 255, 255, 0.1) 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,11 +194,14 @@
 
 .bar-chart-mock .bar {
   flex: 1;
-  background: #3b82f6;
+  background: #01b0b0;
   border-radius: 4px 4px 0 0;
   opacity: 0.8;
 }
-.bar-chart-mock .bar:hover { opacity: 1; }
+
+.bar-chart-mock .bar:hover {
+  opacity: 1;
+}
 
 .donut-chart-mock {
   display: flex;
@@ -215,8 +221,11 @@
 .donut::after {
   content: '';
   position: absolute;
-  top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: 40px; height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
   background: #0f172a;
   border-radius: 50%;
 }
@@ -233,10 +242,23 @@
   color: #d1d5db;
 }
 
-.color-box { width: 10px; height: 10px; border-radius: 2px; }
-.color-box.red { background: #ef4444; }
-.color-box.orange { background: #f97316; }
-.color-box.blue { background: #3b82f6; }
+.color-box {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.color-box.red {
+  background: #ef4444;
+}
+
+.color-box.orange {
+  background: #f97316;
+}
+
+.color-box.blue {
+  background: #3b82f6;
+}
 
 /* Recent Cases Panel */
 .recent-cases-panel {
@@ -285,9 +307,11 @@
 
 .case-overlay {
   position: absolute;
-  bottom: 0; left: 0; width: 100%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 15px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
 
 .case-overlay p {
@@ -314,10 +338,12 @@
   color: #9ca3af;
 }
 
-.severity { color: #ef4444; }
+.severity {
+  color: #ef4444;
+}
 
 .text-btn {
-  color: #60a5fa;
+  color: #01b0b0;
   font-size: 0.9rem;
   text-align: right;
 }
@@ -326,18 +352,24 @@
   .analytics .container {
     grid-template-columns: 1fr 1fr;
   }
+
   .recent-cases-panel {
     grid-column: span 2;
     flex-direction: row;
     gap: 20px;
   }
-  .case-image-placeholder { margin-bottom: 0; min-height: 150px; }
+
+  .case-image-placeholder {
+    margin-bottom: 0;
+    min-height: 150px;
+  }
 }
 
 @media (max-width: 992px) {
   .analytics .container {
     grid-template-columns: 1fr;
   }
+
   .recent-cases-panel {
     grid-column: span 1;
     flex-direction: column;
@@ -345,6 +377,11 @@
 }
 
 @media (max-width: 768px) {
-  .dash-grid { grid-template-columns: 1fr; }
-  .col-span-2 { grid-column: span 1; }
+  .dash-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .col-span-2 {
+    grid-column: span 1;
+  }
 }

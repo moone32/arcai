@@ -5,6 +5,7 @@ import {
   FileText, MessagesSquare, Handshake, MonitorPlay, Coins, Download, ArrowRight
 } from 'lucide-react';
 import './Partners.css';
+import { navigateTo } from '../utils/navigation';
 
 const Partners = () => {
   return (
@@ -270,7 +271,7 @@ const Partners = () => {
                 <label htmlFor="privacyCheck">개인정보 수집 및 이용에 동의합니다.</label>
               </div>
               <div className="pf-buttons">
-                <button className="btn-submit">
+                <button className="btn-submit" onClick={() => navigateTo('/consult')}>
                   파트너 상담 신청 <ArrowRight size={18} />
                 </button>
                 <button className="btn-download">

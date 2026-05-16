@@ -2,6 +2,8 @@ import React from 'react';
 import { CheckCircle2, BellRing, ShieldAlert, BarChart3, ChevronRight } from 'lucide-react';
 import './HeroSection.css';
 
+import { navigateTo } from '../../utils/navigation';
+
 const HeroSection = () => {
   return (
     <section className="hero section-dark" id="hero">
@@ -29,10 +31,10 @@ const HeroSection = () => {
           </ul>
 
           <div className="hero-buttons">
-            <button className="btn btn-primary hero-btn">
+            <button className="btn btn-primary hero-btn" onClick={() => navigateTo('/consult')}>
               무료 견적 받기 <ChevronRight size={18} />
             </button>
-            <button className="btn btn-outline hero-btn">
+            <button className="btn btn-outline hero-btn" onClick={() => navigateTo('/products')}>
               제품 자세히 보기 <ChevronRight size={18} />
             </button>
           </div>

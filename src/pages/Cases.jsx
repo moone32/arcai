@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { 
+import {
   Building2,
   HardHat,
   ShieldCheck,
@@ -9,6 +9,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import './Cases.css';
+import { navigateTo } from '../utils/navigation';
 
 const Cases = () => {
   const [activeFilter, setActiveFilter] = useState('전체');
@@ -77,8 +78,8 @@ const Cases = () => {
     }
   ];
 
-  const filteredCases = activeFilter === '전체' 
-    ? casesData 
+  const filteredCases = activeFilter === '전체'
+    ? casesData
     : casesData.filter(c => c.category === activeFilter);
 
   return (
@@ -112,11 +113,11 @@ const Cases = () => {
       {/* Gallery Section */}
       <section className="cases-gallery-section">
         <div className="container">
-          
+
           {/* Filters */}
           <div className="cases-filters">
             {filters.map(filter => (
-              <button 
+              <button
                 key={filter}
                 className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
                 onClick={() => setActiveFilter(filter)}
@@ -138,7 +139,7 @@ const Cases = () => {
                   <div className="case-body">
                     <h3 className="case-title">{item.title}</h3>
                     <p className="case-desc" style={{ whiteSpace: 'pre-line' }}>{item.desc}</p>
-                    
+
                     <div className="case-metrics">
                       <div className="cm-item">
                         <span className="cm-label">
@@ -177,7 +178,7 @@ const Cases = () => {
               <p>전문가가 맞춤 컨설팅과 구축 사례를 안내해 드립니다.</p>
             </div>
           </div>
-          <button className="consult-action-btn">
+          <button className="consult-action-btn" onClick={() => navigateTo('/consult')}>
             구축 사례 상담 신청 <ChevronRight size={20} />
           </button>
         </div>

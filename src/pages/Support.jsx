@@ -10,6 +10,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import './Support.css';
+import { navigateTo } from '../utils/navigation';
 
 const Support = () => {
   const benefits = [
@@ -128,7 +129,7 @@ const Support = () => {
               <p>지원 가능 여부를 무료로 확인해 드립니다.</p>
             </div>
           </div>
-          <button className="consult-action-btn">
+          <button className="consult-action-btn" onClick={() => navigateTo('/consult')}>
             지원 가능 여부 확인하기 <ChevronRight size={20} />
           </button>
         </div>

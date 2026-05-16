@@ -2,6 +2,8 @@ import React from 'react';
 import { CheckCircle2, MessageCircle } from 'lucide-react';
 import './PricingSection.css';
 
+import { navigateTo } from '../../utils/navigation';
+
 const PricingSection = () => {
   const plans = [
     {
@@ -27,10 +29,10 @@ const PricingSection = () => {
   return (
     <section className="pricing section section-gray" id="pricing">
       <div className="container">
-        
+
         <div className="pricing-container">
           <div className="pricing-intro">
-            <h2 className="section-title text-left pricing-main-title">합리적인 비용으로<br/>최고의 안전을</h2>
+            <h2 className="section-title text-left pricing-main-title">합리적인 비용으로<br />최고의 안전을</h2>
             <div className="intro-badges-wrap">
               <div className="intro-badge">
                 <span className="badge-icon">W</span> 국내 최저 비용
@@ -60,8 +62,8 @@ const PricingSection = () => {
 
           <div className="pricing-cta">
             <div className="cta-icon"><MessageCircle size={32} /></div>
-            <p>전문 부서로 상담하세요!<br/><span>전문가가 빠르게 답변 드립니다.</span></p>
-            <button className="btn btn-outline cta-btn">무료 체험 신청 <span className="arrow">→</span></button>
+            <p>전문 부서로 상담하세요!<br /><span>전문가가 빠르게 답변 드립니다.</span></p>
+            <button className="btn btn-outline cta-btn" onClick={() => navigateTo('/consult')}>무료 체험 신청 <span className="arrow">→</span></button>
           </div>
         </div>
       </div>

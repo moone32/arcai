@@ -13,31 +13,31 @@ import Partners from './pages/Partners';
 import Consult from './pages/Consult';
 
 function App() {
-  const isProductionUrl = window.location.hostname.includes('arcai.co.kr');
+  /*const isProductionUrl = window.location.hostname.includes('arcai.co.kr');*/
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
     const handleLocationChange = () => {
       setCurrentPath(window.location.pathname);
     };
-    
+
     window.addEventListener('popstate', handleLocationChange);
     // Custom event to handle programmatic navigation
     window.addEventListener('pushstate', handleLocationChange);
-    
+
     return () => {
       window.removeEventListener('popstate', handleLocationChange);
       window.removeEventListener('pushstate', handleLocationChange);
     };
   }, []);
 
-  if (isProductionUrl) {
+  /*if (isProductionUrl) {
     return (
       <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
         <img src="/soon.png" alt="Coming Soon" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
       </div>
     );
-  }
+  }*/
 
   return (
     <div className="app-container">

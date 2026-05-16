@@ -10,7 +10,7 @@
   display: inline-block;
   width: 6px;
   height: 30px;
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   border-radius: 3px;
 }
 

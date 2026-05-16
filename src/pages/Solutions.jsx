@@ -5,7 +5,7 @@ import {
   BellRing, Headset, ChevronRight, User
 } from 'lucide-react';
 import './Solutions.css';
-
+import { navigateTo } from '../utils/navigation';
 const Solutions = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
@@ -186,7 +186,7 @@ const Solutions = () => {
                 <p>전문가가 현장을 분석하고 최적의 솔루션을 제안해드립니다.</p>
               </div>
             </div>
-            <button className="consult-action-btn">
+            <button className="consult-action-btn" onClick={() => navigateTo('/consult')}>
               맞춤 솔루션 상담 신청 <ChevronRight size={20} />
             </button>
           </div>

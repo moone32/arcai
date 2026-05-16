@@ -10,6 +10,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import './Benefits.css';
+import { navigateTo } from '../utils/navigation';
 
 const Benefits = () => {
   const steps = [
@@ -138,7 +139,7 @@ const Benefits = () => {
               <p>전문가가 맞춤 분석과 함께 최적의 솔루션을 제안해드립니다.</p>
             </div>
           </div>
-          <button className="consult-action-btn">
+          <button className="consult-action-btn" onClick={() => navigateTo('/consult')}>
             도입 효과 상담 신청 <ChevronRight size={20} />
           </button>
         </div>

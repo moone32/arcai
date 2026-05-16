@@ -2,6 +2,8 @@ import React from 'react';
 import { HelpCircle, CheckCircle, ArrowRight } from 'lucide-react';
 import './ConsultBanner.css';
 
+import { navigateTo } from '../../utils/navigation';
+
 const ConsultBanner = () => {
   return (
     <section className="consult-banner section" id="consult">
@@ -20,7 +22,7 @@ const ConsultBanner = () => {
             </div>
           </div>
 
-          <button className="btn btn-outline banner-btn">
+          <button className="btn btn-outline banner-btn" onClick={() => navigateTo('/consult')}>
             우리 현장 비용 10초 확인 <ArrowRight size={18} />
           </button>
         </div>
