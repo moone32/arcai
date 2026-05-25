@@ -85,6 +85,10 @@
 }
 
 @media (max-width: 576px) {
+  .core-functions {
+    display: none;
+  }
+
   .functions-grid {
     grid-template-columns: repeat(2, 1fr);
   }

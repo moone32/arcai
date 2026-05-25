@@ -186,3 +186,9 @@
     flex-direction: row;
   }
 }
+
+@media (max-width: 576px) {
+  .pricing {
+    display: none;
+  }
+}

@@ -125,25 +125,27 @@
 @media (max-width: 768px) {
   .floating-menu {
     right: 15px;
-    padding: 16px 10px;
+    padding: 2px 2px;
     gap: 12px;
-    border-radius: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
   }
-  
+
   .icon-container {
     width: 44px;
     height: 44px;
     border-radius: 10px;
   }
-  
+
   .talk-bubble {
     width: 32px;
     height: 28px;
     font-size: 10px;
   }
-  
+
   .top-item .icon-circle {
     width: 36px;
     height: 36px;
+    background-color: #4b5563;
   }
 }

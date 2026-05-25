@@ -140,10 +140,11 @@
 @media (max-width: 576px) {
   .benefits-panel {
     grid-template-columns: 1fr;
+    display: none;
   }
 
   .benefits {
-    margin-top: 20px;
+    margin-top: -10px;
   }
 
   .benefit-card {

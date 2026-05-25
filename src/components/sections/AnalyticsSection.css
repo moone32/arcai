@@ -1,5 +1,5 @@
 .analytics {
-  padding: 80px 0;
+  padding: 10px 0;
   position: relative;
   background-color: var(--color-primary);
 }
@@ -383,5 +383,11 @@
 
   .col-span-2 {
     grid-column: span 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .analytics {
+    display: none;
   }
 }

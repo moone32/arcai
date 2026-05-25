@@ -11,17 +11,13 @@ const HeroSection = () => {
 
         <div className="hero-content">
           <div className="alert-badge">
-            <span className="live-dot"></span> 중대재해 처벌법 대책 마련 - 지금 설치 안하면 책임은 회사가 집니다.
+            <span className="live-dot"></span> 중대재해 처벌법-지금설치 안하면 회사가 책입집니다
           </div>
 
-          <h2 className="hero-top-title">
-            <span className="text-gradient"> AI</span> 산업안전 플랫폼
-          </h2>
-
           <h1 className="hero-title">
-            AI가 위험을 <br />
-            <span className="text-gradient"> 실시간</span> 감지하고 <br />
-            사고를 예방합니다.
+            AI가 위험을
+            <span className="text-gradient"> 실시간</span> 감지<br />
+            <span className="text-gradient"> AI</span> 산업안전 플랫폼
           </h1>
 
           <ul className="hero-features">
