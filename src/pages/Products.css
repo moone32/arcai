@@ -113,7 +113,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .products-header h2 {
@@ -379,6 +379,7 @@
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -409,7 +410,8 @@
 
 .video-responsive {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 ratio */
+  padding-bottom: 56.25%;
+  /* 16:9 ratio */
   height: 0;
   overflow: hidden;
 }

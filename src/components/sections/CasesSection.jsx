@@ -26,9 +26,11 @@ const CasesSection = () => {
 
             <div className="map-visual">
               <div className="korea-map-placeholder">
+                <img src="/korea_map.png" alt="대한민국 지도" className="korea-map-img" />
                 <MapPin className="map-pin pin-seoul" />
-                <MapPin className="map-pin pin-busan" />
                 <MapPin className="map-pin pin-daejeon" />
+                <MapPin className="map-pin pin-gwangju" />
+                <MapPin className="map-pin pin-daegu" />
               </div>
               <div className="map-features">
                 <div className="m-feature">

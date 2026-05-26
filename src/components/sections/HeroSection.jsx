@@ -15,9 +15,8 @@ const HeroSection = () => {
           </div>
 
           <h1 className="hero-title">
-            AI가 위험을
-            <span className="text-gradient"> 실시간</span> 감지<br />
-            <span className="text-gradient"> AI</span> 산업안전 플랫폼
+            AI가 위험을 <span className="text-gradient">실시간</span> 감지<br />
+            <span className="text-gradient">AI</span> 산업안전 플랫폼
           </h1>
 
           <ul className="hero-features">

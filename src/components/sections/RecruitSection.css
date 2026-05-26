@@ -1,5 +1,5 @@
 .recruit-section {
-  padding-bottom: 80px;
+  padding-bottom: 20px;
 }
 
 .recruit-wrapper {
@@ -115,7 +115,7 @@
 }
 
 .side-title {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: var(--color-text-muted);
   margin-bottom: 30px;
   text-align: center;
@@ -188,6 +188,7 @@
 
   .recruit-main {
     background: var(--color-primary);
+    padding: 28px;
   }
 
   .recruit-stats {
@@ -214,5 +215,11 @@
 
   .recruit-actions {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-title {
+    font-size: 1.0rem;
   }
 }

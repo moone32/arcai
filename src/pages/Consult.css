@@ -306,3 +306,10 @@
   font-size: 0.95rem;
   color: #64748b;
 }
+
+@media (max-width: 768px) {
+  .cb-left,
+  .cb-right {
+    font-size: 14px;
+  }
+}
