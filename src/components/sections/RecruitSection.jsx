@@ -37,7 +37,7 @@ const RecruitSection = () => {
           </div>
 
           <div className="recruit-side">
-            <h3 className="side-title">3가지 수익 모델로 <span>안정적인 수익 창출</span></h3>
+            <h3 className="side-title">3가지 수익 모델로<br /><span>안정적인 수익 창출</span></h3>
             <div className="models">
               <div className="model-item">
                 <div className="m-icon"><Settings size={24} /></div>

@@ -94,7 +94,7 @@ const ProductsSection = () => {
           </div>
 
           <div className="product-cta">
-            <h3 className="pcta-title">지금 무료로<br />체험하세요!</h3>
+            <h3 className="pcta-title">지금 무료로 체험하세요!</h3>
             <p className="pcta-desc">2주 무료 체험으로<br />안전관리 솔루션을<br />경험해보세요.</p>
             <button className="btn btn-outline pcta-btn" onClick={() => navigateTo('/consult')}>무료 체험 신청 <ArrowRight size={16} /></button>
           </div>

@@ -99,6 +99,7 @@
     align-items: flex-start;
     gap: 15px;
     padding: 24px;
+    display: none;
   }
 }
 
