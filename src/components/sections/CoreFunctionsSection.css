@@ -14,6 +14,11 @@
   border-radius: 3px;
 }
 
+/* Desktop Functions View */
+.desktop-functions-view {
+  display: block;
+}
+
 .functions-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -21,80 +26,168 @@
   margin-top: 40px;
 }
 
-.function-item {
+.function-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--color-border-light);
 }
 
-.fn-icon-box {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-color: white;
-  border: 2px solid var(--color-border-light);
+.function-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.fn-img-box {
+  width: 100%;
+  height: 140px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f8fafc;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  color: var(--color-primary);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
-  transition: all 0.3s;
 }
 
-.function-item:hover .fn-icon-box {
-  border-color: #01b0b0;
-  color: #01b0b0;
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.15);
+.fn-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.function-card:hover .fn-img-box img {
+  transform: scale(1.05);
 }
 
 .fn-badge {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
   background-color: var(--color-primary);
   color: white;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 4px;
   font-size: 0.8rem;
   font-weight: bold;
+  z-index: 2;
 }
 
-.function-item:hover .fn-badge {
-  background-color: #01b0b0;
+.fn-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .fn-title {
   font-weight: 600;
   font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: var(--color-text-dark);
   word-break: keep-all;
+}
+
+.fn-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+/* Mobile Functions View */
+.mobile-functions-view {
+  display: none;
 }
 
 @media (max-width: 1200px) {
   .functions-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px 20px;
+    gap: 30px 20px;
   }
 }
 
-@media (max-width: 576px) {
-  .core-functions {
+@media (max-width: 768px) {
+  .desktop-functions-view {
     display: none;
   }
 
-  .functions-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .mobile-functions-view {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
   }
 
-  .fn-icon-box {
-    width: 100px;
-    height: 100px;
+  .mobile-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .mobile-slides-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .mobile-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .function-card {
+    margin: 0;
+    height: 100%;
+  }
+
+  .fn-img-box {
+    height: 110px;
+  }
+
+  .fn-body {
+    padding: 12px;
+  }
+
+  .fn-title {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+
+  .fn-desc {
+    font-size: 0.75rem;
+  }
+
+  .mobile-slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .mobile-slider-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-slider-dots .dot.active {
+    background-color: #01b0b0;
+    width: 20px;
+    border-radius: 4px;
   }
 }
