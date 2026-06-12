@@ -12,9 +12,13 @@ import './Consult.css';
 const Consult = () => {
   const [formData, setFormData] = useState({
     company: '',
+    businessNumber: '',
     name: '',
+    title: '',
     phone: '',
     category: '',
+    email: '',
+    region: '',
     message: '',
     privacyAgree: false
   });
@@ -48,8 +52,12 @@ const Consult = () => {
       to_email: 'moone34@gmail.com', // 수신자 이메일
       from_name: formData.name,
       company: formData.company,
+      businessNumber: formData.businessNumber,
+      title: formData.title,
       phone: formData.phone,
       category: formData.category,
+      email: formData.email,
+      region: formData.region,
       message: formData.message,
     };
 
@@ -58,9 +66,13 @@ const Consult = () => {
         alert('문의가 성공적으로 접수되었습니다. 담당자가 확인 후 연락드리겠습니다.');
         setFormData({
           company: '',
+          businessNumber: '',
           name: '',
+          title: '',
           phone: '',
           category: '',
+          email: '',
+          region: '',
           message: '',
           privacyAgree: false
         });
@@ -103,12 +115,23 @@ const Consult = () => {
 
                 <div className="form-row-2">
                   <div className="form-group">
-                    <label>회사명 · 직함</label>
-                    <input type="text" name="company" value={formData.company} onChange={handleChange} placeholder="회사명을 입력해주세요" />
+                    <label>회사명 <span className="required-star">*</span></label>
+                    <input type="text" name="company" value={formData.company} onChange={handleChange} placeholder="회사명을 입력해주세요" required />
                   </div>
+                  <div className="form-group">
+                    <label>사업자번호</label>
+                    <input type="text" name="businessNumber" value={formData.businessNumber} onChange={handleChange} placeholder="사업자번호를 입력해주세요" />
+                  </div>
+                </div>
+
+                <div className="form-row-2">
                   <div className="form-group">
                     <label>성함 <span className="required-star">*</span></label>
                     <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="이름을 입력해주세요" required />
+                  </div>
+                  <div className="form-group">
+                    <label>직함</label>
+                    <input type="text" name="title" value={formData.title} onChange={handleChange} placeholder="직함을 입력해주세요" />
                   </div>
                 </div>
 
@@ -129,8 +152,38 @@ const Consult = () => {
                   </div>
                 </div>
 
+                <div className="form-row-2">
+                  <div className="form-group">
+                    <label>이메일 <span className="required-star">*</span></label>
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="이메일을 입력해주세요" required />
+                  </div>
+                  <div className="form-group">
+                    <label>지역 <span className="required-star">*</span></label>
+                    <select name="region" value={formData.region} onChange={handleChange} required>
+                      <option value="" disabled>지역(시/도)을 선택해주세요</option>
+                      <option value="서울">서울특별시</option>
+                      <option value="부산">부산광역시</option>
+                      <option value="대구">대구광역시</option>
+                      <option value="인천">인천광역시</option>
+                      <option value="광주">광주광역시</option>
+                      <option value="대전">대전광역시</option>
+                      <option value="울산">울산광역시</option>
+                      <option value="세종">세종특별자치시</option>
+                      <option value="경기">경기도</option>
+                      <option value="강원">강원특별자치도</option>
+                      <option value="충북">충청북도</option>
+                      <option value="충남">충청남도</option>
+                      <option value="전북">전북특별자치도</option>
+                      <option value="전남">전라남도</option>
+                      <option value="경북">경상북도</option>
+                      <option value="경남">경상남도</option>
+                      <option value="제주">제주특별자치도</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div className="form-group">
-                  <label>이메일 · 문의내용</label>
+                  <label>문의 내용 <span className="required-star">*</span></label>
                   <textarea name="message" value={formData.message} onChange={handleChange} placeholder="문의 내용을 입력해주세요" required></textarea>
                 </div>
 
@@ -140,6 +193,16 @@ const Consult = () => {
                 <div className="privacy-check">
                   <input type="checkbox" id="privacyAgree" name="privacyAgree" checked={formData.privacyAgree} onChange={handleChange} required />
                   <label htmlFor="privacyAgree">개인정보 수집 및 이용에 동의합니다. <span className="sub-text">(필수)</span></label>
+                </div>
+
+                <div className="privacy-policy-box">
+                  개인정보 수집 및 이용동의 (필수){'\n'}
+                  (주)아크아이는 견적 및 시스템 문의 시 최소한의 필요 정보를 아래와 같이 수집 및 이용합니다.{'\n'}
+                  문의자는 개인정보를 수집 및 이용하는 것에 동의 의무는 없으며, 동의하지 않을 경우 신고제도 이용에 제한이 있을 수 있습니다.{'\n\n'}
+                  수집ㆍ이용목적{'\n'}
+                  구매문의 서비스 운영을 위한 문의 내용 접수 및 연락 등{'\n\n'}
+                  수집항목{'\n'}
+                  소속,사업자번호,이름,직함,이메일,연락처
                 </div>
 
                 <button type="submit" className="btn-submit-consult" disabled={isSubmitting}>

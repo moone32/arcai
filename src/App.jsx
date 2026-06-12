@@ -11,6 +11,8 @@ import Support from './pages/Support';
 import Cases from './pages/Cases';
 import Partners from './pages/Partners';
 import Consult from './pages/Consult';
+import InstallServce from './pages/InstallServce';
+import CompanyIntro from './pages/CompanyIntro';
 
 function App() {
   /*const isProductionUrl = window.location.hostname.includes('arcai.co.kr');*/
@@ -44,7 +46,7 @@ function App() {
       <Header />
       <FloatingMenu />
       <main className="main-content">
-        {currentPath === '/solutions' ? <Solutions /> : currentPath === '/benefits' ? <Benefits /> : currentPath === '/products' ? <Products /> : currentPath === '/support' ? <Support /> : currentPath === '/cases' ? <Cases /> : currentPath === '/partners' ? <Partners /> : currentPath === '/consult' ? <Consult /> : <Home />}
+        {currentPath === '/companyIntro' ? <CompanyIntro /> : currentPath === '/solutions' ? <Solutions /> : currentPath === '/benefits' ? <Benefits /> : currentPath === '/products' ? <Products /> : currentPath === '/support' ? <Support /> : currentPath === '/cases' ? <Cases /> : currentPath === '/installServce' ? <InstallServce /> : currentPath === '/partners' ? <Partners /> : currentPath === '/consult' ? <Consult /> : <Home />}
       </main>
       <Footer />
     </div>

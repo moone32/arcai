@@ -53,11 +53,13 @@ const Header = () => {
         </div>
 
         <nav className="desktop-nav">
+          <a href="/companyIntro" className={currentPath === '/companyIntro' ? 'active-nav' : ''} onClick={(e) => navigateTo(e, '/companyIntro')}>기업소개</a>
           <a href="/solutions" className={currentPath === '/solutions' ? 'active-nav' : ''} onClick={(e) => navigateTo(e, '/solutions')}>솔루션</a>
           <a href="/benefits" className={currentPath === '/benefits' ? 'active-nav' : ''} onClick={(e) => navigateTo(e, '/benefits')}>도입효과</a>
           <a href="/products" className={currentPath === '/products' ? 'active-nav' : ''} onClick={(e) => navigateTo(e, '/products')}>제품소개</a>
           <a href="/support" className={currentPath === '/support' ? 'active-nav' : ''} onClick={(e) => navigateTo(e, '/support')}>정부지원</a>
           <a href="/cases" className={currentPath === '/cases' ? 'active-nav' : ''} onClick={(e) => navigateTo(e, '/cases')}>구축사례</a>
+          <a href="/installServce" className={currentPath === '/installServce' ? 'active-nav' : ''} onClick={(e) => navigateTo(e, '/installServce')}>전국설치대응가능</a>
           <a href="/partners" className={`highlight-nav ${currentPath === '/partners' ? 'active-nav' : ''}`} onClick={(e) => navigateTo(e, '/partners')}>★ 파트너 모집</a>
         </nav>
 
@@ -82,11 +84,13 @@ const Header = () => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav">
+          <a href="/companyIntro" className={currentPath === '/companyIntro' ? 'active-nav' : ''} onClick={(e) => { navigateTo(e, '/companyIntro'); closeMobileMenu(); }}>기업소개</a>
           <a href="/solutions" className={currentPath === '/solutions' ? 'active-nav' : ''} onClick={(e) => navigateTo(e, '/solutions')}>솔루션</a>
           <a href="/benefits" className={currentPath === '/benefits' ? 'active-nav' : ''} onClick={(e) => { navigateTo(e, '/benefits'); closeMobileMenu(); }}>도입효과</a>
           <a href="/products" className={currentPath === '/products' ? 'active-nav' : ''} onClick={(e) => { navigateTo(e, '/products'); closeMobileMenu(); }}>제품소개</a>
           <a href="/support" className={currentPath === '/support' ? 'active-nav' : ''} onClick={(e) => { navigateTo(e, '/support'); closeMobileMenu(); }}>정부지원</a>
           <a href="/cases" className={currentPath === '/cases' ? 'active-nav' : ''} onClick={(e) => { navigateTo(e, '/cases'); closeMobileMenu(); }}>구축사례</a>
+          <a href="/installServce" className={currentPath === '/installServce' ? 'active-nav' : ''} onClick={(e) => { navigateTo(e, '/installServce'); closeMobileMenu(); }}>전국설치대응가능</a>
           <a href="/partners" className={`highlight-nav ${currentPath === '/partners' ? 'active-nav' : ''}`} onClick={(e) => { navigateTo(e, '/partners'); closeMobileMenu(); }}>★ 파트너 모집</a>
         </nav>
       </div>
