@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Box, Camera, Video, AlertTriangle, ArrowRight, X } from 'lucide-react';
 import './ProductsSection.css';
 
@@ -6,9 +6,18 @@ import { navigateTo } from '../../utils/navigation';
 
 const ProductsSection = () => {
   const [activeVideo, setActiveVideo] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [slideIndex, setSlideIndex] = useState(0);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const products = [
     {
@@ -101,6 +110,7 @@ const ProductsSection = () => {
     }
   ];
 
+  const displayProducts = products.slice(0, 12);
   const slide1Items = products.slice(0, 6);
   const slide2Items = products.slice(6, 12);
 
@@ -127,95 +137,127 @@ const ProductsSection = () => {
 
         <div className="products-header">
           <h2 className="section-title text-left title-with-bar" style={{ marginBottom: 0 }}>ARCAI 주요 제품</h2>
-          <button className="text-btn">전체 제품 보기 →</button>
+          <button className="text-btn" onClick={() => navigateTo('/products')}>전체 제품 보기 →</button>
         </div>
 
         <div className="products-container" style={{ display: 'block' }}>
-          <div 
-            className="products-slider-wrapper"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-          >
-            <div 
-              className="products-slides-track"
-              style={{ transform: `translateX(-${slideIndex * 100}%)` }}
-            >
-              {/* Slide 1 */}
-              <div className="products-slide">
-                {slide1Items.map((product) => (
-                  <div className="product-card" key={`slide1-${product.id}`}>
-                    <div className="prod-thumb">
-                      <div className="prod-icon-wrapper" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src={product.image} alt={product.title} style={{ maxWidth: '80%', maxHeight: '140px', objectFit: 'contain' }} />
+          {isMobile ? (
+            <>
+              <div
+                className="products-slider-wrapper"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+              >
+                <div
+                  className="products-slides-track"
+                  style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+                >
+                  {/* Slide 1 */}
+                  <div className="products-slide">
+                    {slide1Items.map((product) => (
+                      <div className="product-card" key={`slide1-${product.id}`}>
+                        <div className="prod-thumb">
+                          <div className="prod-icon-wrapper" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <img src={product.image} alt={product.title} style={{ maxWidth: '80%', maxHeight: '140px', objectFit: 'contain' }} />
+                          </div>
+                        </div>
+                        <div className="prod-body">
+                          <span className="prod-badge">{product.badge}</span>
+                          <h3 className="prod-title">{product.title}</h3>
+                          <p className="prod-desc">{product.desc}</p>
+                          <a
+                            href="#detail"
+                            className="prod-link"
+                            onClick={(e) => {
+                              if (product.videoUrl) {
+                                e.preventDefault();
+                                setActiveVideo(product.videoUrl);
+                              }
+                            }}
+                          >
+                            {product.videoUrl ? '영상 보기' : '자세히 보기'} <ArrowRight size={18} />
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                    <div className="prod-body">
-                      <span className="prod-badge">{product.badge}</span>
-                      <h3 className="prod-title">{product.title}</h3>
-                      <p className="prod-desc">{product.desc}</p>
-                      <a
-                        href="#detail"
-                        className="prod-link"
-                        onClick={(e) => {
-                          if (product.videoUrl) {
-                            e.preventDefault();
-                            setActiveVideo(product.videoUrl);
-                          }
-                        }}
-                      >
-                        {product.videoUrl ? '영상 보기' : '자세히 보기'} <ArrowRight size={18} />
-                      </a>
-                    </div>
+                    ))}
                   </div>
-                ))}
+
+                  {/* Slide 2 */}
+                  <div className="products-slide">
+                    {slide2Items.map((product) => (
+                      <div className="product-card" key={`slide2-${product.id}`}>
+                        <div className="prod-thumb">
+                          <div className="prod-icon-wrapper" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <img src={product.image} alt={product.title} style={{ maxWidth: '80%', maxHeight: '140px', objectFit: 'contain' }} />
+                          </div>
+                        </div>
+                        <div className="prod-body">
+                          <span className="prod-badge">{product.badge}</span>
+                          <h3 className="prod-title">{product.title}</h3>
+                          <p className="prod-desc">{product.desc}</p>
+                          <a
+                            href="#detail"
+                            className="prod-link"
+                            onClick={(e) => {
+                              if (product.videoUrl) {
+                                e.preventDefault();
+                                setActiveVideo(product.videoUrl);
+                              }
+                            }}
+                          >
+                            {product.videoUrl ? '영상 보기' : '자세히 보기'} <ArrowRight size={18} />
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
 
-              {/* Slide 2 */}
-              <div className="products-slide">
-                {slide2Items.map((product) => (
-                  <div className="product-card" key={`slide2-${product.id}`}>
-                    <div className="prod-thumb">
-                      <div className="prod-icon-wrapper" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src={product.image} alt={product.title} style={{ maxWidth: '80%', maxHeight: '140px', objectFit: 'contain' }} />
-                      </div>
-                    </div>
-                    <div className="prod-body">
-                      <span className="prod-badge">{product.badge}</span>
-                      <h3 className="prod-title">{product.title}</h3>
-                      <p className="prod-desc">{product.desc}</p>
-                      <a
-                        href="#detail"
-                        className="prod-link"
-                        onClick={(e) => {
-                          if (product.videoUrl) {
-                            e.preventDefault();
-                            setActiveVideo(product.videoUrl);
-                          }
-                        }}
-                      >
-                        {product.videoUrl ? '영상 보기' : '자세히 보기'} <ArrowRight size={18} />
-                      </a>
+              <div className="products-dots">
+                <button
+                  className={`dot ${slideIndex === 0 ? 'active' : ''}`}
+                  onClick={() => setSlideIndex(0)}
+                  aria-label="Slide 1"
+                />
+                <button
+                  className={`dot ${slideIndex === 1 ? 'active' : ''}`}
+                  onClick={() => setSlideIndex(1)}
+                  aria-label="Slide 2"
+                />
+              </div>
+            </>
+          ) : (
+            <div className="products-slide" style={{ overflow: 'visible' }}>
+              {displayProducts.map((product) => (
+                <div className="product-card" key={`product-${product.id}`}>
+                  <div className="prod-thumb">
+                    <div className="prod-icon-wrapper" style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <img src={product.image} alt={product.title} style={{ maxWidth: '80%', maxHeight: '140px', objectFit: 'contain' }} />
                     </div>
                   </div>
-                ))}
-              </div>
+                  <div className="prod-body">
+                    <span className="prod-badge">{product.badge}</span>
+                    <h3 className="prod-title">{product.title}</h3>
+                    <p className="prod-desc">{product.desc}</p>
+                    <a
+                      href="#detail"
+                      className="prod-link"
+                      onClick={(e) => {
+                        if (product.videoUrl) {
+                          e.preventDefault();
+                          setActiveVideo(product.videoUrl);
+                        }
+                      }}
+                    >
+                      {product.videoUrl ? '영상 보기' : '자세히 보기'} <ArrowRight size={18} />
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-
-          <div className="products-dots">
-            <button 
-              className={`dot ${slideIndex === 0 ? 'active' : ''}`}
-              onClick={() => setSlideIndex(0)}
-              aria-label="Slide 1"
-            />
-            <button 
-              className={`dot ${slideIndex === 1 ? 'active' : ''}`}
-              onClick={() => setSlideIndex(1)}
-              aria-label="Slide 2"
-            />
-          </div>
-
+          )}
         </div>
 
       </div>

@@ -1,11 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import './CoreFunctionsSection.css';
 
 const CoreFunctionsSection = () => {
-  const [mobileSlideIndex, setMobileSlideIndex] = useState(0);
-  const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
-
   const functions = [
     { 
       id: '01', 
@@ -45,103 +41,24 @@ const CoreFunctionsSection = () => {
     },
   ];
 
-  const slide1Items = functions.slice(0, 4);
-  const slide2Items = functions.slice(2, 6);
-
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.targetTouches[0].clientX;
-  };
-
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.targetTouches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    const diff = touchStartX.current - touchEndX.current;
-    if (diff > 50) {
-      setMobileSlideIndex(1);
-    } else if (diff < -50) {
-      setMobileSlideIndex(0);
-    }
-  };
-
   return (
     <section className="core-functions section section-light" id="functions">
       <div className="container">
         <h2 className="section-title text-left title-with-bar">ARCAI 스마트 안전 솔루션 핵심 기능</h2>
         
-        {/* Desktop View */}
-        <div className="desktop-functions-view">
-          <div className="functions-grid">
-            {functions.map((fn) => (
-              <div className="function-card" key={fn.id}>
-                <div className="fn-img-box">
-                  <span className="fn-badge">{fn.id}</span>
-                  <img src={fn.image} alt={fn.title} />
-                </div>
-                <div className="fn-body">
-                  <p className="fn-title">{fn.title}</p>
-                  <p className="fn-desc">{fn.desc}</p>
-                </div>
+        <div className="functions-grid">
+          {functions.map((fn) => (
+            <div className="function-card" key={fn.id}>
+              <div className="fn-img-box">
+                <span className="fn-badge">{fn.id}</span>
+                <img src={fn.image} alt={fn.title} />
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Mobile View */}
-        <div className="mobile-functions-view">
-          <div 
-            className="mobile-slider-wrapper"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-          >
-            <div 
-              className="mobile-slides-track"
-              style={{ transform: `translateX(-${mobileSlideIndex * 100}%)` }}
-            >
-              <div className="mobile-slide">
-                {slide1Items.map((fn) => (
-                  <div className="function-card" key={`slide1-${fn.id}`}>
-                    <div className="fn-img-box">
-                      <span className="fn-badge">{fn.id}</span>
-                      <img src={fn.image} alt={fn.title} />
-                    </div>
-                    <div className="fn-body">
-                      <p className="fn-title">{fn.title}</p>
-                      <p className="fn-desc">{fn.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mobile-slide">
-                {slide2Items.map((fn) => (
-                  <div className="function-card" key={`slide2-${fn.id}`}>
-                    <div className="fn-img-box">
-                      <span className="fn-badge">{fn.id}</span>
-                      <img src={fn.image} alt={fn.title} />
-                    </div>
-                    <div className="fn-body">
-                      <p className="fn-title">{fn.title}</p>
-                      <p className="fn-desc">{fn.desc}</p>
-                    </div>
-                  </div>
-                ))}
+              <div className="fn-body">
+                <p className="fn-title">{fn.title}</p>
+                <p className="fn-desc">{fn.desc}</p>
               </div>
             </div>
-          </div>
-          <div className="mobile-slider-dots">
-            <button 
-              className={`dot ${mobileSlideIndex === 0 ? 'active' : ''}`}
-              onClick={() => setMobileSlideIndex(0)}
-              aria-label="Slide 1"
-            />
-            <button 
-              className={`dot ${mobileSlideIndex === 1 ? 'active' : ''}`}
-              onClick={() => setMobileSlideIndex(1)}
-              aria-label="Slide 2"
-            />
-          </div>
+          ))}
         </div>
 
       </div>
