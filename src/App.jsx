@@ -6,7 +6,8 @@ import FloatingMenu from './components/layout/FloatingMenu';
 import Home from './pages/Home';
 import Solutions from './pages/Solutions';
 import Benefits from './pages/Benefits';
-import Products from './pages/Products';
+import ProductCategory from './pages/productCategory/ProductCategory';
+import ProductDetail from './pages/productCategory/ProductDetail';
 import Support from './pages/Support';
 import Cases from './pages/Cases';
 import Partners from './pages/Partners';
@@ -46,7 +47,17 @@ function App() {
       <Header />
       <FloatingMenu />
       <main className="main-content">
-        {currentPath === '/companyIntro' ? <CompanyIntro /> : currentPath === '/solutions' ? <Solutions /> : currentPath === '/benefits' ? <Benefits /> : currentPath === '/products' ? <Products /> : currentPath === '/support' ? <Support /> : currentPath === '/cases' ? <Cases /> : currentPath === '/installServce' ? <InstallServce /> : currentPath === '/partners' ? <Partners /> : currentPath === '/consult' ? <Consult /> : <Home />}
+        {currentPath === '/companyIntro' ? <CompanyIntro /> : 
+         currentPath === '/solutions' ? <Solutions /> : 
+         currentPath === '/benefits' ? <Benefits /> : 
+         currentPath === '/products' ? <ProductCategory categoryPath="product-all" /> : 
+         currentPath.startsWith('/productCategory/productDetail') ? <ProductDetail /> : 
+         currentPath.startsWith('/productCategory/') ? <ProductCategory categoryPath={currentPath.split('/')[2]} /> : 
+         currentPath === '/support' ? <Support /> : 
+         currentPath === '/cases' ? <Cases /> : 
+         currentPath === '/installServce' ? <InstallServce /> : 
+         currentPath === '/partners' ? <Partners /> : 
+         currentPath === '/consult' ? <Consult /> : <Home />}
       </main>
       <Footer />
     </div>

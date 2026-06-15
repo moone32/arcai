@@ -129,12 +129,12 @@
     gap: 12px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.1);
-    top: 80%;
+    top: 75%;
   }
 
   .icon-container {
-    width: 44px;
-    height: 44px;
+    width: 34px;
+    height: 34px;
     border-radius: 10px;
   }
 
