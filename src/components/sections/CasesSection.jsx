@@ -9,8 +9,8 @@ const CasesSection = () => {
     { id: '02', title: '제조 공장', desc: 'AI 기반 실시간 모니터링으로\n설비 이상 감지 및사고 예방', imgClass: 'case-img-2', image: '/case_factory.png' },
     { id: '03', title: '물류 센터', desc: '지게차·보행자 충돌 예방 시스템\n구축으로 안전한물류 환경 구현', imgClass: 'case-img-3', image: '/case_logistics.png' },
     { id: '04', title: '플랜트', desc: '유해가스 감지 및 위협 알림\n시스템으로 중대 사고 예방', imgClass: 'case-img-4', image: '/case_plant.png' },
-    { id: '05', title: '터널', desc: 'AI 기반 터널 내 낙석·붕괴 위험, 화재\n실시간 감지로 작업자 안전 확보', imgClass: 'case-img-5', image: '/case_tunnel.png' },
-    { id: '06', title: '철도', desc: '철도 선로 내 장애물 및 작업자 추돌\n감지 시스템으로 운행 안전성 강화', imgClass: 'case-img-6', image: '/case_railway.png' },
+    { id: '05', title: '터널', desc: 'AI 기반 터널 낙석·붕괴 위험, 화재\n실시간 감지로 작업자 안전 확보', imgClass: 'case-img-5', image: '/case_tunnel.png' },
+    { id: '06', title: '철도', desc: '철도 선로 장애물 및 작업자 추돌\n감지 시스템으로 운행 안전성 강화', imgClass: 'case-img-6', image: '/case_railway.png' },
   ];
 
   return (
@@ -19,12 +19,12 @@ const CasesSection = () => {
         <div className="container">
           <div className="cases-gallery">
             <div className="gallery-header">
-              <h2 className="section-title text-center">현장별 적용 가능한 솔루션</h2>
+              <h2 className="section-title text-left title-with-bar">ARCAI 적용 가능한 솔루션</h2>
             </div>
 
             <div className="gallery-grid">
               {cases.map((c) => (
-                <div className="case-card fade-in" key={c.id}>
+                <div className="case-card fade-in" key={c.id} onClick={() => navigateTo('/cases')}>
                   <div className={`case-img ${c.imgClass}`}>
                     <span className="case-id">{c.id}</span>
                     <img src={c.image} alt={c.title} />
@@ -51,7 +51,6 @@ const CasesSection = () => {
 
             {/* Left text area */}
             <div className="nb-text-area">
-              <span className="nb-subtitle">전국 어디든 빠르게!</span>
               <h2 className="nb-title">전국 설치 대응 가능</h2>
               <p className="nb-desc">
                 전국 네트워크를 통해 빠른 설치와 완벽한 사후관리를<br />
@@ -83,25 +82,25 @@ const CasesSection = () => {
                 <div className="nb-icon">
                   <MapPin size={24} strokeWidth={1.5} />
                 </div>
-                <span className="nb-f-text">전국 어디든<br />설치 가능</span>
+                <span className="nb-f-text">전국 어디든 설치 가능</span>
               </div>
               <div className="nb-feature">
                 <div className="nb-icon">
                   <Clock size={24} strokeWidth={1.5} />
                 </div>
-                <span className="nb-f-text">24시간 이내<br />신속 대응</span>
+                <span className="nb-f-text">24시간 이내 신속 대응</span>
               </div>
               <div className="nb-feature">
                 <div className="nb-icon">
                   <Wrench size={24} strokeWidth={1.5} />
                 </div>
-                <span className="nb-f-text">전문 엔지니어<br />지원</span>
+                <span className="nb-f-text">전문 엔지니어 지원</span>
               </div>
               <div className="nb-feature">
                 <div className="nb-icon">
                   <ShieldCheck size={24} strokeWidth={1.5} />
                 </div>
-                <span className="nb-f-text">체계적인<br />사후 관리</span>
+                <span className="nb-f-text">체계적인 사후 관리</span>
               </div>
             </div>
 

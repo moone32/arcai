@@ -10,9 +10,9 @@
 /* Gallery Area */
 .gallery-header {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .gallery-grid {
@@ -56,12 +56,29 @@
   transform: scale(1.1);
 }
 
-.case-img-1 { background: linear-gradient(135deg, #1e293b, #334155); }
-.case-img-2 { background: linear-gradient(135deg, #0f172a, #1e293b); }
-.case-img-3 { background: linear-gradient(135deg, #334155, #475569); }
-.case-img-4 { background: linear-gradient(135deg, #1e293b, #475569); }
-.case-img-5 { background: linear-gradient(135deg, #0f172a, #334155); }
-.case-img-6 { background: linear-gradient(135deg, #1e293b, #1e293b); }
+.case-img-1 {
+  background: linear-gradient(135deg, #1e293b, #334155);
+}
+
+.case-img-2 {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.case-img-3 {
+  background: linear-gradient(135deg, #334155, #475569);
+}
+
+.case-img-4 {
+  background: linear-gradient(135deg, #1e293b, #475569);
+}
+
+.case-img-5 {
+  background: linear-gradient(135deg, #0f172a, #334155);
+}
+
+.case-img-6 {
+  background: linear-gradient(135deg, #1e293b, #1e293b);
+}
 
 .case-id {
   position: absolute;
@@ -117,8 +134,15 @@
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-in {
@@ -133,7 +157,8 @@
 /* ---------------------------------------------------- */
 .network-banner-section {
   width: 100%;
-  background-color: #0b1a30; /* Dark blue background */
+  background-color: #0b1a30;
+  /* Dark blue background */
   background-image: radial-gradient(circle at 45% 50%, rgba(30, 64, 120, 0.4) 0%, transparent 60%);
   color: #ffffff;
   padding: 60px 0;
@@ -158,7 +183,8 @@
 }
 
 .nb-subtitle {
-  color: #3b82f6; /* Bright blue text */
+  color: #3b82f6;
+  /* Bright blue text */
   font-weight: 700;
   font-size: 0.95rem;
   margin-bottom: 8px;
@@ -243,8 +269,13 @@
 }
 
 @keyframes glowPulse {
-  0% { box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6; }
-  100% { box-shadow: 0 0 15px #60a5fa, 0 0 30px #60a5fa; }
+  0% {
+    box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6;
+  }
+
+  100% {
+    box-shadow: 0 0 15px #60a5fa, 0 0 30px #60a5fa;
+  }
 }
 
 /* Right Features Area */
@@ -268,12 +299,14 @@
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(1, 176, 176, 0.15), rgba(59, 130, 246, 0.15));
+  border: 1px solid rgba(1, 176, 176, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
+  color: #01b0b0;
   position: relative;
+  box-shadow: 0 0 15px rgba(1, 176, 176, 0.2) inset, 0 0 10px rgba(1, 176, 176, 0.2);
 }
 
 /* Subtle ring outside the icon like in the image */
@@ -284,8 +317,19 @@
   left: -6px;
   right: -6px;
   bottom: -6px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(1, 176, 176, 0.5);
   border-radius: 50%;
+  animation: rotateRing 10s linear infinite;
+}
+
+@keyframes rotateRing {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .nb-f-text {
@@ -301,18 +345,19 @@
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .network-banner-content {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0px;
   }
-  
+
   .nb-text-area {
     min-width: 100%;
     align-items: center;
     text-align: center;
   }
-  
+
   .nb-features-area {
     min-width: 100%;
     margin-top: 30px;
@@ -341,15 +386,47 @@
   .c-desc {
     font-size: 0.7rem;
   }
-  
+
   .nb-features-area {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 0 5px;
   }
-  
+
+  .nb-feature {
+    gap: 8px;
+  }
+
+  .nb-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .nb-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nb-icon::before {
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+  }
+
+  .nb-f-text {
+    font-size: 0.65rem;
+    word-break: keep-all;
+    line-height: 1.3;
+  }
+
   .nb-map-area {
     height: 250px;
+  }
+
+  .network-banner-section {
+    padding-top: 20px;
   }
 
   .desktop-btn {

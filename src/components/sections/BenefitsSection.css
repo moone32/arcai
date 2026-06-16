@@ -1,5 +1,5 @@
 .benefits {
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 50px;
   position: relative;
   z-index: 10;
@@ -8,8 +8,8 @@
 
 .benefits-title {
   margin-bottom: 40px;
-  font-size: 2.2rem;
-  font-weight: 800;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #111827;
 }
 
@@ -117,7 +117,8 @@
 }
 
 .benefit-highlight.increase {
-  color: #3b82f6; /* Blue for increase/improvement */
+  color: #3b82f6;
+  /* Blue for increase/improvement */
 }
 
 /* Vertical Before After Graphs */
@@ -128,8 +129,10 @@
   justify-content: center;
   gap: 30px;
   margin-top: auto;
-  height: 160px; /* fixed height for vertical bars area */
-  padding-top: 25px; /* space for percentage text above the bars */
+  height: 160px;
+  /* fixed height for vertical bars area */
+  padding-top: 25px;
+  /* space for percentage text above the bars */
 }
 
 .graph-col {
@@ -148,14 +151,17 @@
 }
 
 .graph-bar-container-vertical {
-  width: 45px; /* thickness of vertical bar */
+  width: 45px;
+  /* thickness of vertical bar */
   flex-grow: 1;
   background-color: #f3f4f6;
   border-radius: 8px 8px 0 0;
   position: relative;
   display: flex;
-  align-items: flex-end; /* bars grow from bottom */
-  overflow: visible; /* so top labels can overflow if needed */
+  align-items: flex-end;
+  /* bars grow from bottom */
+  overflow: visible;
+  /* so top labels can overflow if needed */
 }
 
 .graph-bar-vertical {
@@ -182,14 +188,18 @@
 
 @media (max-width: 576px) {
   .benefits-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 20px;
   }
-  
+
+  .benefits-section {
+    padding-top: 20px;
+  }
+
   .before-after-graph.vertical {
     height: 140px;
   }
-  
+
   .graph-bar-container-vertical {
     width: 35px;
   }

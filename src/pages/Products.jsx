@@ -171,7 +171,7 @@ const Products = () => {
                       }
                     }}
                   >
-                    {product.videoUrl ? '영상 보기' : '자세히 보기'} <ArrowRight size={18} />
+                    {product.videoUrl ? '영상 보기 -&gt;' : '자세히 보기 -&gt;'}
                   </a>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './BenefitsSection.css';
+import { navigateTo } from '../../utils/navigation';
 
 const BenefitsSection = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -80,7 +81,7 @@ const BenefitsSection = () => {
           {item.highlight}
         </div>
       </div>
-      
+
       <div className="before-after-graph vertical">
         <div className="graph-col">
           <div className="graph-bar-container-vertical">
@@ -92,11 +93,11 @@ const BenefitsSection = () => {
         </div>
         <div className="graph-col">
           <div className="graph-bar-container-vertical">
-            <div 
-              className="graph-bar-vertical after" 
-              style={{ 
-                height: `${item.after}%`, 
-                backgroundColor: item.isIncrease ? '#3b82f6' : '#01b0b0' 
+            <div
+              className="graph-bar-vertical after"
+              style={{
+                height: `${item.after}%`,
+                backgroundColor: item.isIncrease ? '#3b82f6' : '#01b0b0'
               }}
             >
               <span className="bar-value">{item.after}%</span>
@@ -109,24 +110,24 @@ const BenefitsSection = () => {
   );
 
   return (
-    <section className="benefits section section-light" id="benefits">
+    <section className="benefits benefits-section section-light" id="benefits">
       <div className="container">
         <h2 className="benefits-title text-left title-with-bar">ARCAI 도입효과</h2>
-        
+
         {isMobile ? (
           <>
-            <div 
+            <div
               className="benefits-slider-wrapper"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
-              <div 
-                className="benefits-slides-track" 
+              <div
+                className="benefits-slides-track"
                 style={{ transform: `translateX(-${slideIndex * 100}%)` }}
               >
                 {benefits.map((item, index) => (
-                  <div className="benefit-card slide-card" key={index}>
+                  <div className="benefit-card slide-card" key={index} onClick={() => navigateTo('/benefits')} style={{ cursor: 'pointer' }}>
                     {renderCardContent(item)}
                   </div>
                 ))}
@@ -147,7 +148,7 @@ const BenefitsSection = () => {
         ) : (
           <div className="benefits-panel">
             {benefits.map((item, index) => (
-              <div className="benefit-card" key={index}>
+              <div className="benefit-card" key={index} onClick={() => navigateTo('/benefits')} style={{ cursor: 'pointer' }}>
                 {renderCardContent(item)}
               </div>
             ))}

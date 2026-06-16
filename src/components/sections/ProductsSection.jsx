@@ -137,7 +137,7 @@ const ProductsSection = () => {
 
         <div className="products-header">
           <h2 className="section-title text-left title-with-bar" style={{ marginBottom: 0 }}>ARCAI 주요 제품</h2>
-          <button className="text-btn" onClick={() => navigateTo('/products')}>전체 제품 보기 →</button>
+          <button className="product-text-btn" onClick={() => navigateTo('/products')}>전체 제품 보기 →</button>
         </div>
 
         <div className="products-container" style={{ display: 'block' }}>
@@ -176,7 +176,7 @@ const ProductsSection = () => {
                               window.scrollTo(0, 0);
                             }}
                           >
-                            자세히 보기 <ArrowRight size={18} />
+                            자세히 보기 -&gt;
                           </a>
                         </div>
                       </div>
@@ -206,7 +206,7 @@ const ProductsSection = () => {
                               window.scrollTo(0, 0);
                             }}
                           >
-                            자세히 보기 <ArrowRight size={18} />
+                            자세히 보기 -&gt;
                           </a>
                         </div>
                       </div>
@@ -251,7 +251,7 @@ const ProductsSection = () => {
                         window.scrollTo(0, 0);
                       }}
                     >
-                      자세히 보기 <ArrowRight size={18} />
+                      자세히 보기 -&gt;
                     </a>
                   </div>
                 </div>
