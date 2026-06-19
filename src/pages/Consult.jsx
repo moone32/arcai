@@ -49,7 +49,7 @@ const Consult = () => {
     const publicKey = 'xeIRoDkcc1HxeyHjS'; // 예: abcdefg12345
 
     const templateParams = {
-      to_email: 'moone34@gmail.com', // 수신자 이메일
+      to_email: 'info@arcai.co.kr', // 수신자 이메일
       from_name: formData.name,
       company: formData.company,
       businessNumber: formData.businessNumber,
@@ -239,7 +239,7 @@ const Consult = () => {
                 <Mail size={32} strokeWidth={1.5} />
               </div>
               <h3 className="ci-card-title">이메일 문의</h3>
-              <div className="ci-card-value small-text">contact@arcai.co.kr</div>
+              <div className="ci-card-value small-text">info@arcai.co.kr</div>
               <div className="ci-card-desc">24시간 접수 가능</div>
             </div>
 
@@ -248,8 +248,7 @@ const Consult = () => {
                 <MapPin size={32} strokeWidth={1.5} />
               </div>
               <h3 className="ci-card-title">본사 위치</h3>
-              <div className="ci-card-value small-text" style={{ color: '#64748b', fontWeight: '500', fontSize: '1rem', lineHeight: '1.5' }}>경기 안산시 상록구<br />한양대학교 55, 6층</div>
-              <div className="ci-card-desc" style={{ marginTop: '12px' }}>평일 09:00 - 18:00</div>
+              <div className="ci-card-value small-text" style={{ color: '#64748b', fontWeight: '500', fontSize: '1rem', lineHeight: '1.5' }}>경기도 남양주시 진접읍 경복대로<br />425-80, 6508호 경복대학교</div>
             </div>
           </div>
 
