@@ -230,7 +230,7 @@ const Consult = () => {
                 <Phone size={32} strokeWidth={1.5} />
               </div>
               <h3 className="ci-card-title">전화 문의</h3>
-              <div className="ci-card-value">1588-0800</div>
+              <div className="ci-card-value">1551-6616</div>
               <div className="ci-card-desc">평일 09:00 - 18:00</div>
             </div>
 

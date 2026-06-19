@@ -64,9 +64,9 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
-          <a href="tel:15880800" className="contact-phone">
+          <a href="tel:15516616" className="contact-phone">
             <Phone size={18} />
-            <span>1588-0800</span>
+            <span>1551-6616</span>
           </a>
           <button className="btn btn-primary consult-btn" onClick={(e) => navigateTo(e, '/consult')}>
             도입 상담 <ArrowRight size={16} />
